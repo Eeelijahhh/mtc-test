@@ -143,7 +143,24 @@ const Menu: React.FC<MenuProps> = ({ open, onChange, children }) => {
               })}
               href={item.url}
             >
-              {item.title}
+              <span>{item.title}</span>
+              {item.isOrder ? (
+                <svg
+                  width="18px"
+                  height="18px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                    stroke="#fff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              ) : null}
             </Link>
           </li>
         ))}
@@ -152,7 +169,6 @@ const Menu: React.FC<MenuProps> = ({ open, onChange, children }) => {
         <span className={styles.hamburgerIcon}>
           {open ? (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>close</title>
               <path
                 fill="#FFFFFF"
                 d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
@@ -160,7 +176,6 @@ const Menu: React.FC<MenuProps> = ({ open, onChange, children }) => {
             </svg>
           ) : (
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>menu</title>
               <path
                 fill="#FFFFFF"
                 d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
@@ -178,8 +193,31 @@ const Menu: React.FC<MenuProps> = ({ open, onChange, children }) => {
         <ul className={styles.mobileList}>
           {MENU_ITEMS.map((item) => (
             <li key={item.id} className={styles.mobileItem}>
-              <Link className={styles.mobileLink} href={item.url}>
-                {item.title}
+              <Link
+                className={classNames({
+                  [styles.mobileLink]: !item.isOrder,
+                  [styles.orderLink]: item.isOrder,
+                })}
+                href={item.url}
+              >
+                <span>{item.title}</span>
+                {item.isOrder ? (
+                  <svg
+                    width="18px"
+                    height="18px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                ) : null}
               </Link>
             </li>
           ))}
