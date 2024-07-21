@@ -3,6 +3,7 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3.2px;
+  line-height: 1.2;
   font-size: var(--base-size);
   background-color: var(--highlight-color);
   color: var(--light-color);

@@ -50,6 +50,11 @@
 .dot {
   background-color: var(--light-color);
   cursor: pointer;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dot:not(.dotActive):hover {
+  background-color: #f5ebce;
 }
 
 .dotActive {

@@ -6,7 +6,6 @@
 
 .wrapper {
   height: var(--header-height);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .rootDark {
