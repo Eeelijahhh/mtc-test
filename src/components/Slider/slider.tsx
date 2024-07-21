@@ -109,9 +109,10 @@ const Slider: React.FC<SliderProps> = ({
       )
     : null;
 
-  const dotsElement = dotsElementId
-    ? document.getElementById(dotsElementId)
-    : null;
+  const dotsElement =
+    typeof window !== "undefined" && dotsElementId
+      ? document.getElementById(dotsElementId)
+      : null;
 
   return (
     <div className={styles.root}>
