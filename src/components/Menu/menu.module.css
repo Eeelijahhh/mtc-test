@@ -10,14 +10,6 @@
   display: flex;
 }
 
-.socialList {
-  display: flex;
-  list-style-type: none;
-  gap: 20px;
-  padding: 0 60px 0 0;
-  margin: 0;
-}
-
 .list {
   display: flex;
   gap: 34px;
