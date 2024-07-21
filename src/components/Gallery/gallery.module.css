@@ -1,0 +1,41 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 86px 0 100px;
+}
+
+.title {
+  color: var(--base-color);
+  font-size: var(--heading-4-size);
+  font-weight: 600;
+  margin: 0;
+}
+
+.gallery {
+  padding-top: 36px;
+}
+
+.galleryList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkWrapper {
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 1023px) {
+  .root {
+    padding: 43px 0 50px;
+  }
+}

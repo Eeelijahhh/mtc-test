@@ -1,0 +1,44 @@
+.root {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: calc(var(--header-height) * -1);
+  color: var(--light-color);
+  background-color: brown;
+  height: 900px;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.title {
+  max-width: 680px;
+  font-size: var(--heading-2-size);
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.subTitle {
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: var(--sm-size);
+  margin: 0;
+}
+
+.linkWrapper {
+  padding-top: 30px;
+}
+
+.sliderDots {
+  position: absolute;
+  bottom: 30px;
+}

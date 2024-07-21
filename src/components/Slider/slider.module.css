@@ -1,0 +1,68 @@
+.root :global(.keen-slider) {
+  width: 100%;
+}
+
+.root {
+  position: relative;
+}
+
+.sliderHidden {
+  display: none;
+}
+
+.leftButton,
+.rightButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  border: unset;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.leftButton.leftButtonDisabled,
+.rightButton.rightButtonDisabled {
+  cursor: default;
+}
+
+.leftButton {
+  left: 112px;
+}
+
+.rightButton {
+  right: 112px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+}
+
+.dot,
+.dotActive {
+  width: 50px;
+  height: 5px;
+  border-radius: 2.5px;
+  border: unset;
+}
+
+.dot {
+  background-color: var(--light-color);
+  cursor: pointer;
+}
+
+.dotActive {
+  background-color: var(--highlight-color);
+  cursor: default;
+}
+
+@media screen and (max-width: 960px) {
+  .leftButton {
+    left: 0;
+  }
+
+  .rightButton {
+    right: 0;
+  }
+}
