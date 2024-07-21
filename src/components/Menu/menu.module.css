@@ -27,8 +27,14 @@
   margin: 0;
 }
 
+.item {
+  display: flex;
+  align-items: center;
+}
+
 .link {
   text-decoration: none;
+  letter-spacing: 3.65px;
   font-size: var(--sm-size);
   color: var(--light-color);
 }
@@ -38,6 +44,10 @@
 }
 
 .orderLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 3.65px;
   text-decoration: none;
   font-size: var(--sm-size);
   color: var(--light-color);

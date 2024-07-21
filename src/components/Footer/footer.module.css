@@ -47,7 +47,8 @@
 }
 
 .menuHeading {
-  font-weight: 600;
+  font-weight: 700;
+  font-family: var(--helvetica-font);
   font-size: var(--xl-size);
 }
 
@@ -69,6 +70,7 @@
 }
 
 .menuLink {
+  letter-spacing: 3.65px;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
   line-height: 30px;

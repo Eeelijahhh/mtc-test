@@ -19,7 +19,9 @@
 }
 
 .title {
+  letter-spacing: 3.65px;
   max-width: 500px;
+  font-family: var(--helvetica-font);
   font-size: var(--heading-4-size);
   letter-spacing: -2px;
   margin: 16px auto 0;

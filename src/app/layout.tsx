@@ -6,8 +6,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import classNames from "classnames";
 import classes from "./layout.module.css";
+import localFont from "next/font/local";
 
 const roboto = Roboto({ weight: ["400"], subsets: ["latin"] });
+const helvetica = localFont({
+  src: "./assets/fonts/Helvetica-Bold.woff2",
+  weight: "700",
+  variable: "--helvetica-font",
+});
 
 export const metadata: Metadata = {
   title: "Home page - MHK",
@@ -21,7 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html className={classes.root} lang="en">
-      <body className={classNames(roboto.className, classes.body)}>
+      <body
+        className={classNames(
+          roboto.className,
+          helvetica.variable,
+          classes.body
+        )}
+      >
         <Header />
         {children}
         <Footer />

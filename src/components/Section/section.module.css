@@ -27,12 +27,14 @@
 
 .title {
   max-width: 680px;
+  font-family: var(--helvetica-font);
   font-size: var(--heading-3-size);
   letter-spacing: -2px;
   margin: 6px 0 0;
 }
 
 .subTitle {
+  letter-spacing: 3.65px;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;

@@ -11,7 +11,8 @@
 .title {
   color: var(--base-color);
   font-size: var(--heading-4-size);
-  font-weight: 600;
+  font-family: var(--helvetica-font);
+  font-weight: 700;
   margin: 0;
 }
 
